@@ -42,11 +42,12 @@ public final class Main {
         System.setProperty("http.agent", "HMCL/" + Metadata.VERSION);
         System.setProperty("javafx.autoproxy.disable", "true");
 
+        checkMoeCraftHMCLDir();
         checkJavaFX();
         checkDirectoryPath();
 
         // This environment check will take ~300ms
-        thread(() -> checkDSTRootCAX3(), "CA Certificate Check", true);
+        thread(Main::checkDSTRootCAX3, "CA Certificate Check", true);
 
         Logging.start(Metadata.HMCL_DIRECTORY.resolve("logs"));
 
@@ -72,6 +73,12 @@ public final class Main {
         } catch (ClassNotFoundException e) {
             showErrorAndExit(i18n("fatal.missing_javafx"));
         }
+    }
+
+    private static void checkMoeCraftHMCLDir() {
+        File HMCLDir = new File(new File("").getAbsolutePath() + "/HMCLData/Library");
+        if(!HMCLDir.exists() || !HMCLDir.isDirectory())
+            showErrorAndExit("Directory HMCLData/Library doesn't exist or inaccessible.\r\nPlease reinstall MoeCraft with MoeCraft Installer");
     }
 
     private static void checkDSTRootCAX3() {

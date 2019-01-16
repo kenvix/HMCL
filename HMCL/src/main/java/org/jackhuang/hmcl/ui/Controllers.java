@@ -41,7 +41,6 @@ import org.jackhuang.hmcl.ui.profile.ProfileList;
 import org.jackhuang.hmcl.ui.versions.GameItem;
 import org.jackhuang.hmcl.ui.versions.GameList;
 import org.jackhuang.hmcl.ui.versions.VersionPage;
-import org.jackhuang.hmcl.upgrade.UpdateChecker;
 import org.jackhuang.hmcl.util.FutureCallback;
 import org.jackhuang.hmcl.util.Logging;
 import org.jackhuang.hmcl.util.io.FileUtils;
@@ -151,10 +150,6 @@ public final class Controllers {
                     mainPage.setCurrentGame(i18n("version.empty"));
                 }
             });
-            mainPage.showUpdateProperty().bind(UpdateChecker.outdatedProperty());
-            mainPage.latestVersionProperty().bind(
-                    MultiStepBinding.of(UpdateChecker.latestVersionProperty())
-                            .map(version -> version == null ? "" : i18n("update.bubble.title", version.getVersion())));
 
             Profiles.registerVersionsListener(profile -> {
                 HMCLGameRepository repository = profile.getRepository();

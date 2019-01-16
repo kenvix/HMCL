@@ -28,7 +28,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.jackhuang.hmcl.Metadata;
-import org.jackhuang.hmcl.upgrade.UpdateChecker;
 
 import static org.jackhuang.hmcl.util.i18n.I18n.i18n;
 
@@ -39,10 +38,7 @@ public class CrashWindow extends Stage {
 
     public CrashWindow(String text) {
         Label lblCrash = new Label();
-        if (UpdateChecker.isOutdated())
-            lblCrash.setText(i18n("launcher.crash_out_dated"));
-        else
-            lblCrash.setText(i18n("launcher.crash"));
+        lblCrash.setText(i18n("launcher.crash"));
         lblCrash.setWrapText(true);
 
         TextArea textArea = new TextArea();

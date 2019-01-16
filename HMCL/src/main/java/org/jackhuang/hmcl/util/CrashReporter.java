@@ -21,9 +21,6 @@ import javafx.application.Platform;
 import org.jackhuang.hmcl.Metadata;
 import org.jackhuang.hmcl.ui.CrashWindow;
 import org.jackhuang.hmcl.ui.construct.MessageBox;
-import org.jackhuang.hmcl.upgrade.IntegrityChecker;
-import org.jackhuang.hmcl.upgrade.UpdateChecker;
-import org.jackhuang.hmcl.util.io.NetworkUtils;
 import org.jackhuang.hmcl.util.platform.OperatingSystem;
 
 import java.io.IOException;
@@ -94,7 +91,7 @@ public class CrashReporter implements Thread.UncaughtExceptionHandler {
                 return;
             CAUGHT_EXCEPTIONS.add(stackTrace);
 
-            String text = "---- Hello Minecraft! Crash Report ----\n" +
+            String text = "---- Hello Minecraft! (for MoeCraft) Crash Report ----\n" +
                     "  Version: " + Metadata.VERSION + "\n" +
                     "  Time: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "\n" +
                     "  Thread: " + t.toString() + "\n" +
@@ -107,32 +104,10 @@ public class CrashReporter implements Thread.UncaughtExceptionHandler {
 
             LOG.log(Level.SEVERE, text);
 
-            if (checkThrowable(e)) {
+            if (checkThrowable(e))
                 Platform.runLater(() -> new CrashWindow(text).show());
-                if (!UpdateChecker.isOutdated() && IntegrityChecker.isSelfVerified()) {
-                    reportToServer(text);
-                }
-            }
         } catch (Throwable handlingException) {
             LOG.log(Level.SEVERE, "Unable to handle uncaught exception", handlingException);
         }
-    }
-
-    private void reportToServer(final String text) {
-        Thread t = new Thread(() -> {
-            HashMap<String, String> map = new HashMap<>();
-            map.put("crash_report", text);
-            map.put("version", Metadata.VERSION);
-            map.put("log", Logging.getLogs());
-            try {
-                String response = NetworkUtils.doPost(NetworkUtils.toURL("https://hmcl.huangyuhui.net/hmcl/crash.php"), map);
-                if (StringUtils.isNotBlank(response))
-                    LOG.log(Level.SEVERE, "Crash server response: " + response);
-            } catch (IOException ex) {
-                LOG.log(Level.SEVERE, "Unable to post HMCL server.", ex);
-            }
-        });
-        t.setDaemon(true);
-        t.start();
     }
 }

@@ -24,7 +24,6 @@ import javafx.stage.Stage;
 import org.jackhuang.hmcl.setting.ConfigHolder;
 import org.jackhuang.hmcl.task.Schedulers;
 import org.jackhuang.hmcl.ui.Controllers;
-import org.jackhuang.hmcl.upgrade.UpdateChecker;
 import org.jackhuang.hmcl.util.*;
 import org.jackhuang.hmcl.util.platform.OperatingSystem;
 
@@ -63,9 +62,6 @@ public final class Launcher extends Application {
                 Controllers.initialize(primaryStage);
                 primaryStage.setResizable(false);
                 primaryStage.setScene(Controllers.getScene());
-
-                UpdateChecker.init();
-
                 primaryStage.show();
             });
         } catch (Throwable e) {

@@ -28,14 +28,14 @@ import org.jackhuang.hmcl.util.platform.OperatingSystem;
 public final class Metadata {
     private Metadata() {}
 
-    public static final String VERSION = System.getProperty("hmcl.version.override", JarUtils.thisJar().flatMap(JarUtils::getImplementationVersion).orElse("@develop@"));
-    public static final String NAME = "HMCL";
+    public static final String VERSION = "7";
+    public static final String NAME = "MoeLauncher";
     public static final String TITLE = NAME + " " + VERSION;
     
-    public static final String UPDATE_URL = System.getProperty("hmcl.update_source.override", "https://hmcl.huangyuhui.net/api/update_link");
-    public static final String CONTACT_URL = "https://hmcl.huangyuhui.net/contact";
-    public static final String HELP_URL = "https://hmcl.huangyuhui.net/help";
-    public static final String PUBLISH_URL = "http://www.mcbbs.net/thread-142335-1-1.html";
+    public static final String UPDATE_URL = "";
+    public static final String CONTACT_URL = "https://github.com/MoeNetwork/MoeCraft/issues";
+    public static final String HELP_URL = "https://accounts.moecraft.net/";
+    public static final String PUBLISH_URL = "https://www.moecraft.net";
 
     public static final Path MINECRAFT_DIRECTORY = OperatingSystem.getWorkingDirectory("minecraft");
     public static final Path HMCL_DIRECTORY = OperatingSystem.getWorkingDirectory("hmcl");

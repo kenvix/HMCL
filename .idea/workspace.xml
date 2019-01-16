@@ -7,7 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0bbf21-1bf7-402d-9ba2-a5f7021e4bea" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/HMCL/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -62,11 +75,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
+            <state relative-caret-position="176">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="155" column="79" lean-forward="true" selection-start-line="155" selection-start-column="79" selection-end-line="155" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/MainPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/profile.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-567" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -97,6 +186,12 @@
       <find>mojang</find>
       <find>moecraft</find>
       <find>compress</find>
+      <find>@develo</find>
+      <find>UpdateC</find>
+      <find>Copyright</find>
+      <find>huangyuhui.</find>
+      <find>about.copyright.statement</find>
+      <find>支持</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Work Station\Java\HMCL\HMCL</dir>
@@ -109,21 +204,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigHolder.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/VersionSettingsController.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/VersionSetting.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java" />
         <option value="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDownloader.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" />
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/Accounts.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/MainPage.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="151" />
@@ -195,6 +300,26 @@
               <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
+              <item name="upgrade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -205,6 +330,38 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="download" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="modpack" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
@@ -242,6 +399,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -252,7 +418,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547639823075" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547641563475" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/HMCL/src/main/java/META-INF" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -355,18 +521,18 @@
       <workItem from="1547627386189" duration="467000" />
       <workItem from="1547636153816" duration="116000" />
       <workItem from="1547636412794" duration="2238000" />
-      <workItem from="1547638700430" duration="1145000" />
+      <workItem from="1547638700430" duration="2837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16244000" />
+    <option name="totallyTimeSpent" value="17936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -374,7 +540,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28199565" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3275488" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -385,19 +551,19 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.22234273" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.114072494" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.114072494" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="11" weight="0.32995737" />
     </layout>
   </component>
@@ -422,20 +588,6 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/ImmediateStringProperty.java" />
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3129">
-          <caret line="201" column="35" selection-start-line="201" selection-start-column="35" selection-end-line="201" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/VersionSettingsController.java" />
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/I18n.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -478,16 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="40" column="73" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-header.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -495,64 +637,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/img/alex.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account-add.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/img/bookshelf.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/img/background.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,10 +653,192 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/Lang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="164" column="25" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/LogWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/FXUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
+        <state relative-caret-position="-987">
+          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/download/installers.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/download/versions-list-item.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/wizard.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/task-dialog.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/authlib-injector-servers.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account-add.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account-login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/download/versions.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/download/additional-installers.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/download/modpack.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-header.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="19" column="25" selection-start-line="19" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/profile.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="92" column="52" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="155" column="79" lean-forward="true" selection-start-line="155" selection-start-column="79" selection-end-line="155" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,7 +859,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2027027" />
                 <option value="0.5" />
               </list>
             </option>

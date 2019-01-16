@@ -34,10 +34,7 @@ import org.jackhuang.hmcl.setting.*;
 import org.jackhuang.hmcl.ui.construct.MessageBox;
 import org.jackhuang.hmcl.ui.construct.Validator;
 import org.jackhuang.hmcl.ui.decorator.DecoratorPage;
-import org.jackhuang.hmcl.upgrade.RemoteVersion;
 import org.jackhuang.hmcl.upgrade.UpdateChannel;
-import org.jackhuang.hmcl.upgrade.UpdateChecker;
-import org.jackhuang.hmcl.upgrade.UpdateHandler;
 import org.jackhuang.hmcl.util.Logging;
 import org.jackhuang.hmcl.util.i18n.Locales;
 import org.jackhuang.hmcl.util.javafx.SafeStringConverter;
@@ -130,33 +127,6 @@ public final class SettingsPage extends SettingsView implements DecoratorPage {
 
         // ==== Update ====
         FXUtils.installTooltip(btnUpdate, i18n("update.tooltip"));
-        updateListener = any -> {
-            btnUpdate.setVisible(UpdateChecker.isOutdated());
-
-            if (UpdateChecker.isOutdated()) {
-                lblUpdateSub.setText(i18n("update.newest_version", UpdateChecker.getLatestVersion().getVersion()));
-                lblUpdateSub.getStyleClass().setAll("update-label");
-
-                lblUpdate.setText(i18n("update.found"));
-                lblUpdate.getStyleClass().setAll("update-label");
-            } else if (UpdateChecker.isCheckingUpdate()) {
-                lblUpdateSub.setText(i18n("update.checking"));
-                lblUpdateSub.getStyleClass().setAll("subtitle-label");
-
-                lblUpdate.setText(i18n("update"));
-                lblUpdate.getStyleClass().setAll();
-            } else {
-                lblUpdateSub.setText(i18n("update.latest"));
-                lblUpdateSub.getStyleClass().setAll("subtitle-label");
-
-                lblUpdate.setText(i18n("update"));
-                lblUpdate.getStyleClass().setAll();
-            }
-        };
-        UpdateChecker.latestVersionProperty().addListener(new WeakInvalidationListener(updateListener));
-        UpdateChecker.outdatedProperty().addListener(new WeakInvalidationListener(updateListener));
-        UpdateChecker.checkingUpdateProperty().addListener(new WeakInvalidationListener(updateListener));
-        updateListener.invalidated(null);
 
         lblUpdateNote.setWrappingWidth(470);
 
@@ -210,11 +180,7 @@ public final class SettingsPage extends SettingsView implements DecoratorPage {
 
     @Override
     protected void onUpdate() {
-        RemoteVersion target = UpdateChecker.getLatestVersion();
-        if (target == null) {
-            return;
-        }
-        UpdateHandler.updateFrom(target);
+
     }
 
     @Override
