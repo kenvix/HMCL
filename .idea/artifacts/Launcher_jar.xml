@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact name="Launcher.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="root">
+      <element id="archive" name="Launcher.jar">
+        <element id="module-output" name="HMCLCore_main" />
+        <element id="directory" name="assets">
+          <element id="dir-copy" path="$PROJECT_DIR$/HMCL/src/main/resources/assets" />
+        </element>
+        <element id="module-output" name="HMCL_main" />
+        <element id="directory" name="META-INF">
+          <element id="dir-copy" path="$PROJECT_DIR$/HMCL/src/main/java/META-INF" />
+        </element>
+      </element>
+      <element id="directory" name="HMCLData">
+        <element id="directory" name="Library">
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jenkins-ci/constant-pool-scanner/1.2/e5e0b7c7fcb67767dbd195e0ca1f0ee9406dd423/constant-pool-scanner-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hildan.fxgson/fx-gson/3.1.0/f790089f4c7863ef5e8c2073bba8a5341627b4a5/fx-gson-3.1.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/15.0/d40ab99147584cf6cfb5245be67b3fee2c7220f9/annotations-15.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.steveice10/opennbt/1.1/5a4d89be0434e29ba2517b1b2f91c7ff326a2e7d/opennbt-1.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/JFoenix.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tukaani/xz/1.8/c4f7d054303948eb6a4066194253886c8af07128/xz-1.8.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
