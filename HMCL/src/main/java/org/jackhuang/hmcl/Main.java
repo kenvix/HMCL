@@ -42,7 +42,7 @@ public final class Main {
         System.setProperty("http.agent", "HMCL/" + Metadata.VERSION);
         System.setProperty("javafx.autoproxy.disable", "true");
 
-        checkMoeCraftHMCLDir();
+        //checkMoeCraftHMCLDir();
         checkJavaFX();
         checkDirectoryPath();
 

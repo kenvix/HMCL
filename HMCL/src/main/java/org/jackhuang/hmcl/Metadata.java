@@ -18,6 +18,7 @@
 package org.jackhuang.hmcl;
 
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.jackhuang.hmcl.util.io.JarUtils;
 import org.jackhuang.hmcl.util.platform.OperatingSystem;
@@ -37,6 +38,7 @@ public final class Metadata {
     public static final String HELP_URL = "https://accounts.moecraft.net/";
     public static final String PUBLISH_URL = "https://www.moecraft.net";
 
+    public static final Path HMCL_DIRECTORY = Paths.get("./HMCLData/");
+    public static final Path HMCL_LIBRARY_DIRECTORY = HMCL_DIRECTORY.resolve("Library");
     public static final Path MINECRAFT_DIRECTORY = OperatingSystem.getWorkingDirectory("minecraft");
-    public static final Path HMCL_DIRECTORY = OperatingSystem.getWorkingDirectory("hmcl");
 }

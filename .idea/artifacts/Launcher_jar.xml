@@ -23,6 +23,7 @@
           <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/JFoenix.jar" />
           <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tukaani/xz/1.8/c4f7d054303948eb6a4066194253886c8af07128/xz-1.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/authlib-injector.jar" />
         </element>
       </element>
     </root>

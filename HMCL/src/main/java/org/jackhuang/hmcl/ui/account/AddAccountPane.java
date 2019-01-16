@@ -21,6 +21,8 @@ import com.jfoenix.concurrency.JFXUtilities;
 import com.jfoenix.controls.*;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.ReadOnlyObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Hyperlink;
@@ -60,6 +62,7 @@ public class AddAccountPane extends StackPane {
     @FXML private JFXPasswordField txtPassword;
     @FXML private Label lblCreationWarning;
     @FXML private Label lblPassword;
+    @FXML private Label lblUsername;
     @FXML private JFXComboBox<AccountFactory<?>> cboType;
     @FXML private JFXComboBox<AuthlibInjectorServer> cboServers;
     @FXML private Label lblInjectorServer;
@@ -69,6 +72,7 @@ public class AddAccountPane extends StackPane {
     @FXML private JFXButton btnAddServer;
     @FXML private JFXButton btnManageServer;
     @FXML private SpinnerPane acceptPane;
+    @FXML private Label nonInjectorLoginTypeWarning;
 
     public AddAccountPane() {
         FXUtils.loadFXML(this, "/assets/fxml/account-add.fxml");
@@ -79,7 +83,7 @@ public class AddAccountPane extends StackPane {
         cboServers.getItems().addListener(onInvalidating(this::selectDefaultServer));
         selectDefaultServer();
 
-        cboType.getItems().setAll(Accounts.FACTORY_OFFLINE, Accounts.FACTORY_YGGDRASIL, Accounts.FACTORY_AUTHLIB_INJECTOR);
+        cboType.getItems().setAll(Accounts.FACTORY_AUTHLIB_INJECTOR, Accounts.FACTORY_OFFLINE, Accounts.FACTORY_YGGDRASIL);
         cboType.setConverter(stringConverter(Accounts::getLocalizedLoginTypeName));
         // try selecting the preferred login type
         cboType.getSelectionModel().select(
@@ -101,6 +105,16 @@ public class AddAccountPane extends StackPane {
 
         txtPassword.visibleProperty().bind(loginType.isNotEqualTo(Accounts.FACTORY_OFFLINE));
         lblPassword.visibleProperty().bind(txtPassword.visibleProperty());
+
+        //lblUsername.addEventHandler(loginType.);
+        cboType.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue.equals(Accounts.FACTORY_AUTHLIB_INJECTOR))
+                lblUsername.setText(i18n("account.username_authlib"));
+            else
+                lblUsername.setText(i18n("account.username"));
+        });
+
+        nonInjectorLoginTypeWarning.visibleProperty().bind(loginType.isNotEqualTo(Accounts.FACTORY_AUTHLIB_INJECTOR));
 
         cboServers.visibleProperty().bind(loginType.isEqualTo(Accounts.FACTORY_AUTHLIB_INJECTOR));
         lblInjectorServer.visibleProperty().bind(cboServers.visibleProperty());

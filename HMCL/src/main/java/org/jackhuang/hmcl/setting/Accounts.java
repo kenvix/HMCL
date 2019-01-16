@@ -30,7 +30,6 @@ import org.jackhuang.hmcl.auth.AuthenticationException;
 import org.jackhuang.hmcl.auth.authlibinjector.AuthlibInjectorAccount;
 import org.jackhuang.hmcl.auth.authlibinjector.AuthlibInjectorAccountFactory;
 import org.jackhuang.hmcl.auth.authlibinjector.AuthlibInjectorArtifactProvider;
-import org.jackhuang.hmcl.auth.authlibinjector.AuthlibInjectorDownloader;
 import org.jackhuang.hmcl.auth.authlibinjector.AuthlibInjectorServer;
 import org.jackhuang.hmcl.auth.authlibinjector.SimpleAuthlibInjectorArtifactProvider;
 import org.jackhuang.hmcl.auth.offline.OfflineAccount;
@@ -243,11 +242,11 @@ public final class Accounts {
     // ==== authlib-injector ====
     private static AuthlibInjectorArtifactProvider createAuthlibInjectorArtifactProvider() {
         String authlibinjectorLocation = System.getProperty("hmcl.authlibinjector.location");
-        if (authlibinjectorLocation == null) {
-            return new AuthlibInjectorDownloader(Metadata.HMCL_DIRECTORY, DownloadProviders::getDownloadProvider);
-        } else {
+        if (authlibinjectorLocation != null) {
             LOG.info("Using specified authlib-injector: " + authlibinjectorLocation);
             return new SimpleAuthlibInjectorArtifactProvider(Paths.get(authlibinjectorLocation));
+        } else {
+            return new SimpleAuthlibInjectorArtifactProvider(Metadata.HMCL_LIBRARY_DIRECTORY.resolve("authlib-injector.jar"));
         }
     }
 

@@ -19,6 +19,7 @@ package org.jackhuang.hmcl.setting;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
+import org.jackhuang.hmcl.Metadata;
 import org.jackhuang.hmcl.util.InvocationDispatcher;
 import org.jackhuang.hmcl.util.Lang;
 import org.jackhuang.hmcl.util.io.FileUtils;
@@ -38,8 +39,8 @@ public final class ConfigHolder {
 
     private ConfigHolder() {}
 
-    public static final String CONFIG_FILENAME = "hmcl.json";
-    public static final String CONFIG_FILENAME_LINUX = ".hmcl.json";
+    public static final String CONFIG_FILENAME = Metadata.HMCL_DIRECTORY.resolve("hmcl.json").toString();
+    public static final String CONFIG_FILENAME_LINUX = CONFIG_FILENAME;
 
     private static Path configLocation;
     private static Config configInstance;
