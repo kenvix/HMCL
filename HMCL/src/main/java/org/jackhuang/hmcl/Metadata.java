@@ -29,7 +29,7 @@ import org.jackhuang.hmcl.util.platform.OperatingSystem;
 public final class Metadata {
     private Metadata() {}
 
-    public static final String VERSION = "7";
+    public static final String VERSION = "6";
     public static final String NAME = "MoeLauncher";
     public static final String TITLE = NAME + " " + VERSION;
     
@@ -37,6 +37,9 @@ public final class Metadata {
     public static final String CONTACT_URL = "https://github.com/MoeNetwork/MoeCraft/issues";
     public static final String HELP_URL = "https://accounts.moecraft.net/";
     public static final String PUBLISH_URL = "https://www.moecraft.net";
+
+    public static final String MOECRAFT_AUTHLIB_URL = "https://accounts.moecraft.net/API/Mc/authlib/";
+    public static final String MOECRAFT_AUTHLIB_JSON = "{\"meta\":{\"serverName\":\"MoeCraft\",\"implementationName\":\"MoeCraft Account Center: Minecraft Yggdrasil API (Completely Implemented by Kenvix) for Authlib-Injector 1.1.23\",\"implementationVersion\":\"5.0\"},\"skinDomains\":[\".moecraft.net\",\".kenvix.com\",\"localhost\"],\"signaturePublickey\":\"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYM0MxKIv4ybovs4XlwMk4g\\/0r\\nO4+HDK+ltpFDkFjiBY5pDHK4J5Z2tdtkliK7DC2mwIAK5wOeTXYb9uHO8VAVxuE9\\nenMSOiVl9uvSVPelDU\\/t\\/JH3gSE6yYT7aNHT6xpvqnSQrCUGDvTbsqXvjxEr3F\\/H\\nzORoqhiGR+F27XfOhQIDAQAB\\n-----END PUBLIC KEY-----\",\"status\":0,\"info\":\"\"}";
 
     public static final Path HMCL_DIRECTORY = Paths.get("./HMCLData/");
     public static final Path HMCL_LIBRARY_DIRECTORY = HMCL_DIRECTORY.resolve("Library");

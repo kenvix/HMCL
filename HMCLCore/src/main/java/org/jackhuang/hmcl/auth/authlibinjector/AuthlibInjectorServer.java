@@ -187,7 +187,7 @@ public class AuthlibInjectorServer implements Observable {
         Platform.runLater(helper::invalidate);
     }
 
-    private void setMetadataResponse(String metadataResponse, long metadataTimestamp) throws JsonParseException {
+    public void setMetadataResponse(String metadataResponse, long metadataTimestamp) throws JsonParseException {
         JsonObject response = GSON.fromJson(metadataResponse, JsonObject.class);
         if (response == null) {
             throw new JsonParseException("Metadata response is empty");

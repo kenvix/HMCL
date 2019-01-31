@@ -163,6 +163,11 @@ public final class Config implements Cloneable, Observable {
 
     public Config() {
         PropertyUtils.attachListener(this, helper);
+        if(authlibInjectorServers.size() <= 0) {
+            AuthlibInjectorServer moecraftServerObject = new AuthlibInjectorServer(Metadata.MOECRAFT_AUTHLIB_URL);
+            moecraftServerObject.setMetadataResponse(Metadata.MOECRAFT_AUTHLIB_JSON, 1547725339314L);
+            authlibInjectorServers.add(moecraftServerObject);
+        }
     }
 
     @Override
