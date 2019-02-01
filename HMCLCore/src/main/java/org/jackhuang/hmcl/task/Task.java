@@ -18,10 +18,7 @@
 package org.jackhuang.hmcl.task;
 
 import javafx.application.Platform;
-import javafx.beans.property.ReadOnlyDoubleProperty;
-import javafx.beans.property.ReadOnlyDoubleWrapper;
-import javafx.beans.property.ReadOnlyStringProperty;
-import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.property.*;
 import org.jackhuang.hmcl.event.EventManager;
 import org.jackhuang.hmcl.util.AutoTypingMap;
 import org.jackhuang.hmcl.util.InvocationDispatcher;
@@ -58,14 +55,18 @@ public abstract class Task {
         this.significance = significance;
     }
 
-    private TaskState state = TaskState.READY;
+    private ReadOnlyObjectWrapper<TaskState> state = new ReadOnlyObjectWrapper<>(this, "state", TaskState.READY);
 
     public TaskState getState() {
-        return state;
+        return state.get();
     }
 
     void setState(TaskState state) {
-        this.state = state;
+        this.state.setValue(state);
+    }
+
+    public ReadOnlyObjectProperty<TaskState> stateProperty() {
+        return state.getReadOnlyProperty();
     }
 
     private Throwable lastException = null;
@@ -144,6 +145,10 @@ public abstract class Task {
         this.variables = variables;
     }
 
+    public boolean doPreExecute() {
+        return false;
+    }
+
     /**
      * @throws InterruptedException if current thread is interrupted
      * @see Thread#isInterrupted
@@ -155,6 +160,10 @@ public abstract class Task {
      * @see Thread#isInterrupted
      */
     public abstract void execute() throws Exception;
+
+    public boolean doPostExecute() {
+        return false;
+    }
 
     /**
      * @throws InterruptedException if current thread is interrupted
@@ -371,12 +380,16 @@ public abstract class Task {
         return new CoupleTask<>(null, b, true);
     }
 
+    public static <V> TaskResult<V> ofResult(Callable<V> callable) {
+        return ofResult("", callable);
+    }
+
     public static <V> TaskResult<V> ofResult(String id, Callable<V> callable) {
         return new TaskCallable<>(id, callable);
     }
 
     public static <V> TaskResult<V> ofResult(String id, ExceptionalFunction<AutoTypingMap<String>, V, ?> closure) {
-        return new TaskCallable2<>(id, closure);
+        return new TaskCallable<>(id, closure);
     }
 
     private static ExceptionalFunction<AutoTypingMap<String>, Task, ?> convert(Task t) {

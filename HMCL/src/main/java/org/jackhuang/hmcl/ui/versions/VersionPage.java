@@ -94,20 +94,18 @@ public final class VersionPage extends StackPane implements DecoratorPage {
         PopupMenu managementList = new PopupMenu();
         managementPopup = new JFXPopup(managementList);
         managementList.getContent().setAll(
-                new IconedMenuItem(null, i18n("version.manage.rename"), FXUtils.withJFXPopupClosing(() -> Versions.renameVersion(profile, version), managementPopup)),
-                new IconedMenuItem(null, i18n("version.manage.remove"), FXUtils.withJFXPopupClosing(() -> Versions.deleteVersion(profile, version), managementPopup)),
                 new IconedMenuItem(null, i18n("version.manage.redownload_assets_index"), FXUtils.withJFXPopupClosing(() -> Versions.updateGameAssets(profile, version), managementPopup)),
                 new IconedMenuItem(null, i18n("version.manage.remove_libraries"), FXUtils.withJFXPopupClosing(() -> FileUtils.deleteDirectoryQuietly(new File(profile.getRepository().getBaseDirectory(), "libraries")), managementPopup)),
                 new IconedMenuItem(null, i18n("version.manage.clean"), FXUtils.withJFXPopupClosing(() -> Versions.cleanVersion(profile, version), managementPopup)).addTooltip(i18n("version.manage.clean.tooltip"))
         );
 
-        FXUtils.installTooltip(btnDelete, i18n("version.manage.remove"));
-        FXUtils.installTooltip(btnBrowseMenu, i18n("settings.game.exploration"));
-        FXUtils.installTooltip(btnManagementMenu, i18n("settings.game.management"));
-        FXUtils.installTooltip(btnExport, i18n("modpack.export"));
+        FXUtils.installFastTooltip(btnDelete, i18n("version.manage.remove"));
+        FXUtils.installFastTooltip(btnBrowseMenu, i18n("settings.game.exploration"));
+        FXUtils.installFastTooltip(btnManagementMenu, i18n("settings.game.management"));
+        FXUtils.installFastTooltip(btnExport, i18n("modpack.export"));
 
         btnTestGame.setGraphic(SVG.launch(Theme.whiteFillBinding(), 20, 20));
-        FXUtils.installTooltip(btnTestGame, i18n("version.launch.test"));
+        FXUtils.installFastTooltip(btnTestGame, i18n("version.launch.test"));
 
         setEventHandler(Navigator.NavigationEvent.NAVIGATED, this::onNavigated);
     }

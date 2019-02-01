@@ -19,10 +19,12 @@ package org.jackhuang.hmcl.ui.account;
 
 import com.jfoenix.concurrency.JFXUtilities;
 import com.jfoenix.controls.*;
+
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Hyperlink;
@@ -46,11 +48,16 @@ import org.jackhuang.hmcl.ui.Controllers;
 import org.jackhuang.hmcl.ui.FXUtils;
 import org.jackhuang.hmcl.ui.construct.*;
 import org.jackhuang.hmcl.util.Logging;
+import org.jackhuang.hmcl.util.javafx.MultiStepBinding;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 
+import static java.util.Collections.emptyList;
+import static java.util.Collections.unmodifiableList;
 import static java.util.Objects.requireNonNull;
 import static org.jackhuang.hmcl.setting.ConfigHolder.config;
 import static org.jackhuang.hmcl.ui.FXUtils.*;
@@ -62,17 +69,18 @@ public class AddAccountPane extends StackPane {
     @FXML private JFXPasswordField txtPassword;
     @FXML private Label lblCreationWarning;
     @FXML private Label lblPassword;
-    @FXML private Label lblUsername;
     @FXML private JFXComboBox<AccountFactory<?>> cboType;
     @FXML private JFXComboBox<AuthlibInjectorServer> cboServers;
     @FXML private Label lblInjectorServer;
-    @FXML private Hyperlink linkManageInjectorServers;
-    @FXML private JFXDialogLayout layout;
     @FXML private JFXButton btnAccept;
     @FXML private JFXButton btnAddServer;
     @FXML private JFXButton btnManageServer;
     @FXML private SpinnerPane acceptPane;
+    @FXML private HBox linksContainer;
+    @FXML private Label lblUsername;
     @FXML private Label nonInjectorLoginTypeWarning;
+
+    private ListProperty<Hyperlink> links = new SimpleListProperty<>();;
 
     public AddAccountPane() {
         FXUtils.loadFXML(this, "/assets/fxml/account-add.fxml");
@@ -83,14 +91,14 @@ public class AddAccountPane extends StackPane {
         cboServers.getItems().addListener(onInvalidating(this::selectDefaultServer));
         selectDefaultServer();
 
-        cboType.getItems().setAll(Accounts.FACTORY_AUTHLIB_INJECTOR, Accounts.FACTORY_OFFLINE, Accounts.FACTORY_YGGDRASIL);
+        cboType.getItems().setAll( Accounts.FACTORY_AUTHLIB_INJECTOR, Accounts.FACTORY_OFFLINE, Accounts.FACTORY_YGGDRASIL);
         cboType.setConverter(stringConverter(Accounts::getLocalizedLoginTypeName));
         // try selecting the preferred login type
         cboType.getSelectionModel().select(
                 cboType.getItems().stream()
                         .filter(type -> Accounts.getLoginType(type).equals(config().getPreferredLoginType()))
                         .findFirst()
-                        .orElse(Accounts.FACTORY_OFFLINE));
+                        .orElse(Accounts.FACTORY_AUTHLIB_INJECTOR)); //DEFAULT FACTORY_AUTHLIB_INJECTOR
 
         btnAddServer.visibleProperty().bind(cboServers.visibleProperty());
         btnManageServer.visibleProperty().bind(cboServers.visibleProperty());
@@ -116,6 +124,7 @@ public class AddAccountPane extends StackPane {
 
         nonInjectorLoginTypeWarning.visibleProperty().bind(loginType.isNotEqualTo(Accounts.FACTORY_AUTHLIB_INJECTOR));
 
+
         cboServers.visibleProperty().bind(loginType.isEqualTo(Accounts.FACTORY_AUTHLIB_INJECTOR));
         lblInjectorServer.visibleProperty().bind(cboServers.visibleProperty());
 
@@ -124,13 +133,41 @@ public class AddAccountPane extends StackPane {
         btnAccept.disableProperty().bind(Bindings.createBooleanBinding(
                 () -> !( // consider the opposite situation: input is valid
                         txtUsername.validate() &&
-                        // invisible means the field is not needed, neither should it be validated
-                        (!txtPassword.isVisible() || txtPassword.validate()) &&
-                        (!cboServers.isVisible() || cboServers.getSelectionModel().getSelectedItem() != null)
+                                // invisible means the field is not needed, neither should it be validated
+                                (!txtPassword.isVisible() || txtPassword.validate()) &&
+                                (!cboServers.isVisible() || cboServers.getSelectionModel().getSelectedItem() != null)
                 ),
                 txtUsername.textProperty(),
                 txtPassword.textProperty(), txtPassword.visibleProperty(),
                 cboServers.getSelectionModel().selectedItemProperty(), cboServers.visibleProperty()));
+
+        // authlib-injector links
+        links.bind(MultiStepBinding.of(cboServers.getSelectionModel().selectedItemProperty())
+                .map(AddAccountPane::createHyperlinks)
+                .map(FXCollections::observableList));
+        Bindings.bindContent(linksContainer.getChildren(), links);
+        linksContainer.visibleProperty().bind(cboServers.visibleProperty());
+    }
+
+    private static final String[] ALLOWED_LINKS = { "register" };
+
+    public static List<Hyperlink> createHyperlinks(AuthlibInjectorServer server) {
+        if (server == null) {
+            return emptyList();
+        }
+
+        Map<String, String> links = server.getLinks();
+        List<Hyperlink> result = new ArrayList<>();
+        for (String key : ALLOWED_LINKS) {
+            String value = links.get(key);
+            if (value != null) {
+                Hyperlink link = new Hyperlink(i18n("account.injector.link." + key));
+                FXUtils.installSlowTooltip(link, value);
+                link.setOnAction(e -> FXUtils.openLink(value));
+                result.add(link);
+            }
+        }
+        return unmodifiableList(result);
     }
 
     /**
@@ -174,10 +211,8 @@ public class AddAccountPane extends StackPane {
         AccountFactory<?> factory = cboType.getSelectionModel().getSelectedItem();
         Object additionalData = getAuthAdditionalData();
 
-        Task.ofResult("create_account", () -> factory.create(new Selector(), username, password, additionalData))
-                .finalized(Schedulers.javafx(), variables -> {
-
-                    Account account = variables.get("create_account");
+        Task.ofResult(() -> factory.create(new Selector(), username, password, additionalData))
+                .finalizedResult(Schedulers.javafx(), account -> {
                     int oldIndex = Accounts.getAccounts().indexOf(account);
                     if (oldIndex == -1) {
                         Accounts.getAccounts().add(account);

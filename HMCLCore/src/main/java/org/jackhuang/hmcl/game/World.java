@@ -28,6 +28,7 @@ import org.jackhuang.hmcl.util.io.FileUtils;
 import org.jackhuang.hmcl.util.io.Unzipper;
 import org.jackhuang.hmcl.util.io.Zipper;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -39,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
@@ -193,7 +195,7 @@ public class World {
     }
 
     private static CompoundTag parseLevelDat(Path path) throws IOException {
-        try (InputStream is = new GZIPInputStream(Files.newInputStream(path))) {
+        try (InputStream is = new BufferedInputStream(new GZIPInputStream(Files.newInputStream(path)))) {
             Tag nbt = NBTIO.readTag(is);
             if (nbt instanceof CompoundTag)
                 return (CompoundTag) nbt;
@@ -202,20 +204,20 @@ public class World {
         }
     }
 
-    public static List<World> getWorlds(Path savesDir) {
-        List<World> worlds = new ArrayList<>();
+    public static Stream<World> getWorlds(Path savesDir) {
         try {
             if (Files.exists(savesDir))
-                for (Path world : Files.newDirectoryStream(savesDir)) {
+                return Files.list(savesDir).flatMap(world -> {
                     try {
-                        worlds.add(new World(world));
+                        return Stream.of(new World(world));
                     } catch (IOException | IllegalArgumentException e) {
                         Logging.LOG.log(Level.WARNING, "Failed to read world " + world, e);
+                        return Stream.empty();
                     }
-                }
+                });
         } catch (IOException e) {
             Logging.LOG.log(Level.WARNING, "Failed to read saves", e);
         }
-        return worlds;
+        return Stream.empty();
     }
 }

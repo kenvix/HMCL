@@ -52,7 +52,7 @@ public abstract class SettingsView extends StackPane {
     protected final Text lblUpdateNote;
     protected final JFXRadioButton chkUpdateStable;
     protected final JFXRadioButton chkUpdateDev;
-    protected final JFXButton btnUpdate;
+    //protected final JFXButton btnUpdate;
     protected final ScrollPane scroll;
     protected final MultiFileItem<EnumBackgroundImage> backgroundItem;
     protected final StackPane themeColorPickerContainer;
@@ -90,11 +90,11 @@ public abstract class SettingsView extends StackPane {
                     }
 
                     {
-                        btnUpdate = new JFXButton();
-                        btnUpdate.getStyleClass().setAll("toggle-icon4");
-                        btnUpdate.setGraphic(SVG.update(Theme.blackFillBinding(), 20, 20));
+                        //btnUpdate = new JFXButton();
+                        //btnUpdate.getStyleClass().setAll("toggle-icon4");
+                        //btnUpdate.setGraphic(SVG.update(Theme.blackFillBinding(), 20, 20));
 
-                        updatePane.setHeaderRight(btnUpdate);
+                        //updatePane.setHeaderRight(btnUpdate);
                     }
 
                     {
@@ -358,7 +358,7 @@ public abstract class SettingsView extends StackPane {
                                 HBox hBox = new HBox();
                                 hBox.setSpacing(3);
 
-                                cboFont = new FontComboBox(12, false);
+                                cboFont = new FontComboBox(12);
                                 txtFontSize = new JFXTextField();
                                 FXUtils.setLimitWidth(txtFontSize, 50);
                                 hBox.getChildren().setAll(cboFont, txtFontSize);

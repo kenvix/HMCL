@@ -1,90 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXDialogLayout?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.*?>
 <?import com.jfoenix.validation.RequiredFieldValidator?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import org.jackhuang.hmcl.ui.FXUtils?>
 <?import org.jackhuang.hmcl.ui.construct.SpinnerPane?>
-
-<fx:root type="StackPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         type="StackPane">
     <JFXDialogLayout fx:id="layout">
         <heading>
-            <Label text="%account.create" />
+            <Label text="%account.create"/>
         </heading>
         <body>
-            <GridPane hgap="15" style="-fx-padding: 15 0 0 0;" vgap="15">
+            <GridPane vgap="15" hgap="15" style="-fx-padding: 15 0 0 0;">
                 <columnConstraints>
-                    <ColumnConstraints maxWidth="70" minWidth="70" />
-                    <ColumnConstraints />
-                    <ColumnConstraints minWidth="140" />
+                    <ColumnConstraints maxWidth="70" minWidth="70"/>
+                    <ColumnConstraints/>
+                    <ColumnConstraints minWidth="140"/>
                 </columnConstraints>
 
-                <Label text="%account.methods" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+                <Label text="%account.methods" GridPane.halignment="RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"/>
 
-                <JFXComboBox fx:id="cboType" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                <JFXComboBox fx:id="cboType" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
 
-                <Label fx:id="lblInjectorServer" text="%account.injector.server" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                <Label fx:id="lblInjectorServer" text="%account.injector.server" GridPane.halignment="RIGHT"
+                       GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
                 <Label fx:id="nonInjectorLoginTypeWarning" text="%account.method.moecraft.prompt" textFill="#0f0829"
                        GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
 
-                <JFXComboBox fx:id="cboServers" maxHeight="25" promptText="%account.injector.empty" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <JFXComboBox fx:id="cboServers" promptText="%account.injector.empty" maxHeight="25" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-                <HBox spacing="8" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                    <JFXButton fx:id="btnAddServer" onMouseClicked="#onAddInjecterServer" styleClass="toggle-icon4">
+                <HBox GridPane.columnIndex="2" GridPane.rowIndex="1" spacing="8">
+                    <HBox fx:id="linksContainer" alignment="CENTER_LEFT"/>
+                    <JFXButton fx:id="btnAddServer" styleClass="toggle-icon4" onMouseClicked="#onAddInjecterServer">
                         <graphic>
                             <javafx.scene.shape.SVGPath content="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                         </graphic>
                     </JFXButton>
-                    <JFXButton fx:id="btnManageServer" onMouseClicked="#onManageInjecterServers" styleClass="toggle-icon4">
+                    <JFXButton fx:id="btnManageServer" styleClass="toggle-icon4" onMouseClicked="#onManageInjecterServers">
                         <graphic>
                             <fx:include source="/assets/svg/gear.fxml" />
                         </graphic>
                     </JFXButton>
                 </HBox>
 
-                <Label fx:id="lblUsername" text="%account.username_authlib" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                <Label fx:id="lblUsername" text="%account.username" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 
-                <JFXTextField fx:id="txtUsername" onAction="#onCreationAccept" FXUtils.validateWhileTextChanged="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                <JFXTextField fx:id="txtUsername" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="2"
+                              FXUtils.validateWhileTextChanged="true" onAction="#onCreationAccept">
                     <validators>
                         <RequiredFieldValidator message="%input.not_empty">
                         </RequiredFieldValidator>
                     </validators>
                 </JFXTextField>
 
-                <Label fx:id="lblPassword" text="%account.password" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                <Label fx:id="lblPassword" text="%account.password" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
 
-                <JFXPasswordField fx:id="txtPassword" onAction="#onCreationAccept" FXUtils.validateWhileTextChanged="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                <JFXPasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                  GridPane.columnSpan="2" FXUtils.validateWhileTextChanged="true" onAction="#onCreationAccept">
                     <validators>
                         <RequiredFieldValidator message="%input.not_empty">
                         </RequiredFieldValidator>
                     </validators>
                 </JFXPasswordField>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
             </GridPane>
         </body>
         <actions>
-            <Label fx:id="lblCreationWarning" />
+            <Label fx:id="lblCreationWarning"/>
             <HBox>
                 <SpinnerPane fx:id="acceptPane" styleClass="small-spinner-pane">
-                    <JFXButton fx:id="btnAccept" onMouseClicked="#onCreationAccept" styleClass="dialog-accept" text="%button.ok" />
+                    <JFXButton fx:id="btnAccept" onMouseClicked="#onCreationAccept" text="%button.ok" styleClass="dialog-accept"/>
                 </SpinnerPane>
-                <JFXButton onMouseClicked="#onCreationCancel" styleClass="dialog-cancel" text="%button.cancel" />
+                <JFXButton onMouseClicked="#onCreationCancel" text="%button.cancel" styleClass="dialog-cancel"/>
             </HBox>
         </actions>
     </JFXDialogLayout>
