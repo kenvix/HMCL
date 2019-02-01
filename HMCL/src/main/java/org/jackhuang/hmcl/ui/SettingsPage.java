@@ -126,7 +126,7 @@ public final class SettingsPage extends SettingsView implements DecoratorPage {
                         config().commonDirectoryProperty(), config().commonDirTypeProperty()));
 
         // ==== Update ====
-        FXUtils.installTooltip(btnUpdate, i18n("update.tooltip"));
+        //FXUtils.installTooltip(btnUpdate, i18n("update.tooltip"));
 
         lblUpdateNote.setWrappingWidth(470);
 

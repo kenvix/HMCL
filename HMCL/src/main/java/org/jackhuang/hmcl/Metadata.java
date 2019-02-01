@@ -29,7 +29,7 @@ import org.jackhuang.hmcl.util.platform.OperatingSystem;
 public final class Metadata {
     private Metadata() {}
 
-    public static final String VERSION = "6";
+    public static final String VERSION = "6.1";
     public static final String NAME = "MoeLauncher";
     public static final String TITLE = NAME + " " + VERSION;
     

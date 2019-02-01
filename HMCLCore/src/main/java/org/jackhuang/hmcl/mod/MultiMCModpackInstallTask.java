@@ -21,10 +21,11 @@ import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
 import org.jackhuang.hmcl.download.DefaultDependencyManager;
 import org.jackhuang.hmcl.download.GameBuilder;
+import org.jackhuang.hmcl.download.MaintainTask;
 import org.jackhuang.hmcl.download.game.VersionJsonSaveTask;
-import org.jackhuang.hmcl.game.Arguments;
 import org.jackhuang.hmcl.game.DefaultGameRepository;
 import org.jackhuang.hmcl.game.Version;
+import org.jackhuang.hmcl.game.VersionLibraryBuilder;
 import org.jackhuang.hmcl.task.Task;
 import org.jackhuang.hmcl.util.Lang;
 import org.jackhuang.hmcl.util.gson.JsonUtils;
@@ -63,7 +64,6 @@ public final class MultiMCModpackInstallTask extends Task {
         this.name = name;
         this.repository = dependencyManager.getGameRepository();
 
-        File run = repository.getRunDirectory(name);
         File json = repository.getModpackConfiguration(name);
         if (repository.hasVersion(name) && !json.exists())
             throw new IllegalArgumentException("Version " + name + " already exists.");
@@ -89,6 +89,22 @@ public final class MultiMCModpackInstallTask extends Task {
             if (event.isFailed())
                 repository.removeVersionFromDisk(name);
         });
+    }
+    
+    @Override
+    public List<Task> getDependencies() {
+        return dependencies;
+    }
+
+    @Override
+    public boolean doPreExecute() {
+        return true;
+    }
+
+    @Override
+    public void preExecute() throws Exception {
+        File run = repository.getRunDirectory(name);
+        File json = repository.getModpackConfiguration(name);
 
         ModpackConfiguration<MultiMCInstanceConfiguration> config = null;
         try {
@@ -102,14 +118,14 @@ public final class MultiMCModpackInstallTask extends Task {
         } catch (JsonParseException | IOException ignore) {
         }
 
-        dependents.add(new ModpackInstallTask<>(zipFile, run, modpack.getEncoding(), "/" + manifest.getName() + "/minecraft", any -> true, config));
+        try (FileSystem fs = CompressingUtils.readonly(zipFile.toPath()).setEncoding(modpack.getEncoding()).build()) {
+            if (Files.exists(fs.getPath("/" + manifest.getName() + "/.minecraft")))
+                dependents.add(new ModpackInstallTask<>(zipFile, run, modpack.getEncoding(), "/" + manifest.getName() + "/.minecraft", any -> true, config));
+            else if (Files.exists(fs.getPath("/" + manifest.getName() + "/minecraft")))
+                dependents.add(new ModpackInstallTask<>(zipFile, run, modpack.getEncoding(), "/" + manifest.getName() + "/minecraft", any -> true, config));
+        }
     }
-    
-    @Override
-    public List<Task> getDependencies() {
-        return dependencies;
-    }
-    
+
     @Override
     public List<Task> getDependents() {
         return dependents;
@@ -129,20 +145,19 @@ public final class MultiMCModpackInstallTask extends Task {
                     if (patchJson.toString().endsWith(".json")) {
                         // If json is malformed, we should stop installing this modpack instead of skipping it.
                         MultiMCInstancePatch patch = JsonUtils.GSON.fromJson(IOUtils.readFullyAsString(Files.newInputStream(patchJson)), MultiMCInstancePatch.class);
-                        List<String> newArguments = new LinkedList<>();
-                        for (String arg : patch.getTweakers()) {
-                            newArguments.add("--tweakClass");
-                            newArguments.add(arg);
-                        }
-                        version = version
+
+                        VersionLibraryBuilder builder = new VersionLibraryBuilder(version);
+                        for (String arg : patch.getTweakers())
+                            builder.addArgument("--tweakClass", arg);
+
+                        version = builder.build()
                                 .setLibraries(Lang.merge(version.getLibraries(), patch.getLibraries()))
-                                .setMainClass(patch.getMainClass())
-                                .setArguments(version.getArguments().orElseGet(Arguments::new).addGameArguments(newArguments));
+                                .setMainClass(patch.getMainClass());
                     }
                 }
         }
 
-        dependencies.add(new VersionJsonSaveTask(repository, version));
+        dependencies.add(new MaintainTask(version).then(var -> new VersionJsonSaveTask(repository, var.get(MaintainTask.ID))));
         dependencies.add(new MinecraftInstanceTask<>(zipFile, modpack.getEncoding(), "/" + manifest.getName() + "/minecraft", manifest, MODPACK_TYPE, repository.getModpackConfiguration(name)));
     }
 

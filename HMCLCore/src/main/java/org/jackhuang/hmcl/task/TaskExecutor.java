@@ -149,13 +149,15 @@ public final class TaskExecutor {
         try {
             task.setVariables(variables);
 
-            try {
-                task.getScheduler().schedule(task::preExecute).get();
-            } catch (ExecutionException e) {
-                if (e.getCause() instanceof Exception)
-                    throw (Exception) e.getCause();
-                else
-                    throw e;
+            if (task.doPreExecute()) {
+                try {
+                    task.getScheduler().schedule(task::preExecute).get();
+                } catch (ExecutionException e) {
+                    if (e.getCause() instanceof Exception)
+                        throw (Exception) e.getCause();
+                    else
+                        throw e;
+                }
             }
 
             boolean doDependentsSucceeded = executeTasks(task.getDependents());
@@ -194,13 +196,15 @@ public final class TaskExecutor {
             if (doDependenciesSucceeded)
                 task.setDependenciesSucceeded();
 
-            try {
-                task.getScheduler().schedule(task::postExecute).get();
-            } catch (ExecutionException e) {
-                if (e.getCause() instanceof Exception)
-                    throw (Exception) e.getCause();
-                else
-                    throw e;
+            if (task.doPostExecute()) {
+                try {
+                    task.getScheduler().schedule(task::postExecute).get();
+                } catch (ExecutionException e) {
+                    if (e.getCause() instanceof Exception)
+                        throw (Exception) e.getCause();
+                    else
+                        throw e;
+                }
             }
 
             flag = true;
@@ -211,6 +215,7 @@ public final class TaskExecutor {
             task.onDone().fireEvent(new TaskEvent(this, task, false));
             taskListeners.forEach(it -> it.onFinished(task));
         } catch (InterruptedException e) {
+            task.setLastException(e);
             if (task.getSignificance().shouldLog()) {
                 Logging.LOG.log(Level.FINE, "Task aborted: " + task.getName());
             }
