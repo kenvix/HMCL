@@ -26,6 +26,7 @@ import java.util.Optional;
 
 import org.jackhuang.hmcl.download.BMCLAPIDownloadProvider;
 import org.jackhuang.hmcl.download.DownloadProvider;
+import org.jackhuang.hmcl.download.MoeCraftDownloadProvider;
 import org.jackhuang.hmcl.download.MojangDownloadProvider;
 
 import javafx.beans.binding.Bindings;
@@ -37,7 +38,8 @@ public final class DownloadProviders {
 
     public static final Map<String, DownloadProvider> providersById = mapOf(
             pair("mojang", new MojangDownloadProvider()),
-            pair("bmclapi", new BMCLAPIDownloadProvider()));
+            pair("bmclapi", new BMCLAPIDownloadProvider()),
+            pair("moecraft", new MoeCraftDownloadProvider()));
 
     public static final String DEFAULT_PROVIDER_ID = "bmclapi";
 
