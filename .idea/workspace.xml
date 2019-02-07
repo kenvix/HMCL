@@ -6,13 +6,58 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0bbf21-1bf7-402d-9ba2-a5f7021e4bea" name="Default" comment="merged">
-      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/MoeCraftDownloadProvider.java" afterDir="false" />
+    <list default="true" id="af0bbf21-1bf7-402d-9ba2-a5f7021e4bea" name="Default" comment="add moecraft download provider">
+      <change afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/game/TexturesLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/CompleteGameProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/PropertyMapSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/TextureModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableOptionalCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/game/AccountHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountAdvancedListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountAdvancedListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountLoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountLoginPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServerItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServerItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskListPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskListPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoCharacterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoCharacterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoSelectedCharacterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoSelectedCharacterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/SpecificCharacterSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterDeletedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/GameProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/GameProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/MojangYggdrasilProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/MojangYggdrasilProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/PropertyMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccountFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccountFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/MaintainTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/MaintainTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/CircleDependencyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/TolerableValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/IdDownloadInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/IdDownloadInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/LoggingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/game/LoggingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/InvocationDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/InvocationDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/UUIDTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/UUIDTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/ValidationTypeAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/ValidationTypeAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MultiStepBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MultiStepBinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,57 +115,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="2919">
               <caret line="172" column="41" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigUpgrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="132" column="52" selection-start-line="132" selection-start-column="52" selection-end-line="132" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineBMCLVersionList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
-          <provider selected="true" editor-type-id="ResourceBundle" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+            <state relative-caret-position="462">
+              <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -129,8 +134,8 @@
         <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties">
           <provider editor-type-id="ResourceBundle" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="339" selection-start-line="339" selection-end-line="339" selection-end-column="34" />
+            <state relative-caret-position="7119">
+              <caret line="340" selection-start-line="340" selection-end-line="340" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -213,10 +218,10 @@
         <option value="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties" />
         <option value="$PROJECT_DIR$/HMCL/src/main/resources/assets/fxml/account-add.fxml" />
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java" />
-        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java" />
         <option value="$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/MoeCraftDownloadProvider.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java" />
         <option value="$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties" />
+        <option value="$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java" />
       </list>
     </option>
   </component>
@@ -228,17 +233,16 @@
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="271" />
-    <option name="y" value="235" />
-    <option name="width" value="1940" />
-    <option name="height" value="1085" />
+    <option name="x" value="447" />
+    <option name="y" value="176" />
+    <option name="width" value="1735" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,160 +250,19 @@
               <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMCL" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCL" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLauncher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
-              <item name="download" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLCore" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hmcl" type="462c0819:PsiDirectoryNode" />
-              <item name="download" type="462c0819:PsiDirectoryNode" />
-              <item name="MoeCraftDownloadProvider" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="HMCLData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMCL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMCL" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549270949323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549326254445" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -518,7 +381,12 @@
       <workItem from="1548941098694" duration="1465000" />
       <workItem from="1549060307329" duration="2278000" />
       <workItem from="1549104667272" duration="538000" />
-      <workItem from="1549269927415" duration="1021000" />
+      <workItem from="1549269927415" duration="2255000" />
+      <workItem from="1549352057377" duration="39000" />
+      <workItem from="1549353330093" duration="879000" />
+      <workItem from="1549371952286" duration="652000" />
+      <workItem from="1549414124429" duration="610000" />
+      <workItem from="1549502721183" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="Commit changes before merge">
       <created>1548941182053</created>
@@ -534,17 +402,24 @@
       <option name="project" value="LOCAL" />
       <updated>1549061410635</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add moecraft download provider">
+      <created>1549270977613</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549270977613</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43616000" />
+    <option name="totallyTimeSpent" value="47224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18063872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19211577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -554,7 +429,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3279678" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28199565" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.24144869" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24144869" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -564,14 +439,14 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.2334004" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.222334" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.222334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info active="true" anchor="right" id="Gradle" order="6" visible="true" weight="0.1017964" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.1017964" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -587,7 +462,8 @@
     <MESSAGE value="Commit changes before commit" />
     <MESSAGE value="Commit changes before merge" />
     <MESSAGE value="merged" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged" />
+    <MESSAGE value="add moecraft download provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="add moecraft download provider" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.3/c3bc8659eca392a635059c6cda7b1365dfbe5a43/annotations-16.0.3-sources.jar!/org/jetbrains/annotations/Nullable.java">
@@ -896,27 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/WebStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="172" column="41" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineBMCLVersionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/MoeCraftDownloadProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -937,9 +792,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineBMCLVersionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
+        <state relative-caret-position="902">
           <caret line="132" column="52" selection-start-line="132" selection-start-column="52" selection-end-line="132" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -947,33 +817,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigUpgrader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/SettingsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2919">
+          <caret line="172" column="41" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties">
       <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="339" selection-start-line="339" selection-end-line="339" selection-end-column="34" />
+        <state relative-caret-position="7119">
+          <caret line="340" selection-start-line="340" selection-end-line="340" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HMCL/src/main/resources/assets/lang/I18N.properties">
-      <provider selected="true" editor-type-id="ResourceBundle" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/ui/WebStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigUpgrader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
         </state>
       </provider>
     </entry>
